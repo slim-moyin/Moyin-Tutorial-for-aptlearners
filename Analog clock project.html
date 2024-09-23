@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/clock.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./Analog clock project_files/clock.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="clock container">
+      <div id="clock">
+        <div id="hour" class="hand" style="--color: #ff3d58; --height: 76px; --width: 4px; transform: rotate(482.5deg);">
+          <i></i>
+        </div>
+        <div id="minute" class="hand" style="--color: #00a6ff; --height: 86px; --width: 3px; transform: rotate(30deg);">
+          <i></i>
+        </div>
+        <div id="second" class="hand" style="--color: #ffffff; --height: 96px; --width: 2px; transform: rotate(324deg);">
+          <i></i>
+        </div>
+        <span style="--i: 1; --j: 0"><i>|</i></span>
+        <span style="--i: 2; --j: 0"><i>|</i></span>
+        <span style="--i: 3; --j: 3"><i>3</i></span>
+        <span style="--i: 4; --j: 0"><i>|</i></span>
+        <span style="--i: 5; --j: 0"><i>|</i></span>
+        <span style="--i: 6; --j: 6"><i>6</i></span>
+        <span style="--i: 7; --j: 0"><i>|</i></span>
+        <span style="--i: 8; --j: 0"><i>|</i></span>
+        <span style="--i: 9; --j: 9"><i>9</i></span>
+        <span style="--i: 10; --j: 0"><i>|</i></span>
+        <span style="--i: 11; --j: 0"><i>|</i></span>
+        <span style="--i: 12; --j: 12"><i>12</i></span>
+        </div>
+      </div>
+    
+     <script src="./Analog clock project_files/clock.js.download"></script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
